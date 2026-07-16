@@ -23,10 +23,10 @@ const menuItems = [
   { id: 'p2', name: 'Meat Feast', price: 7000, description: 'Pepperoni, beef, chicken, sausages on a rich tomato base.', image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800&q=80', category: 'Pizza' },
   
   // More Nigerian Meals
-  { id: 'bp1', name: 'Beans & Plantain', price: 1800, description: 'Slow-cooked Nigerian honey beans served alongside sweet fried plantain.', image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80', category: 'Nigerian Meals' },
-  { id: 'mm1', name: 'Moi Moi', price: 800, description: 'Steamed bean pudding made with peppers, onions, and spices. Soft and flavourful.', image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80', category: 'Nigerian Meals' },
-  { id: 'ef1', name: 'Efo Riro & Semovita', price: 2500, description: 'Yoruba-style leafy vegetable soup cooked with assorted meat, served with smooth semovita.', image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80', category: 'Nigerian Meals' },
-  { id: 'og1', name: 'Ogbono & Pounded Yam', price: 2800, description: 'Draw soup made from ground ogbono seeds with assorted meat, paired with silky pounded yam.', image: 'https://images.unsplash.com/photo-1623961990059-28356e226a77?w=800&q=80', category: 'Nigerian Meals' },
+  { id: 'bp1', name: 'Beans & Plantain', price: 1800, description: 'Slow-cooked Nigerian honey beans served alongside sweet fried plantain.', image: new URL('@assets/images_1784199104801.jpeg', import.meta.url).href, category: 'Nigerian Meals' },
+  { id: 'mm1', name: 'Moi Moi', price: 800, description: 'Steamed bean pudding made with peppers, onions, and spices. Soft and flavourful.', image: new URL('@assets/savingpng-19_1784199104886.webp', import.meta.url).href, category: 'Nigerian Meals' },
+  { id: 'ef1', name: 'Efo Riro & Semovita', price: 2500, description: 'Yoruba-style leafy vegetable soup cooked with assorted meat, served with smooth semovita.', image: new URL('@assets/images_(15)_1784199104952.jpeg', import.meta.url).href, category: 'Nigerian Meals' },
+  { id: 'og1', name: 'Ogbono & Pounded Yam', price: 2800, description: 'Draw soup made from ground ogbono seeds with assorted meat, paired with silky pounded yam.', image: new URL('@assets/images_(12)_1784199104918.jpeg', import.meta.url).href, category: 'Nigerian Meals' },
 
   // Small Chops & Drinks
   { id: 'sc1', name: 'Small Chops Pack', price: 2500, description: 'Spring rolls, samosas, puff puff, and peppered meat.', image: 'https://images.unsplash.com/photo-1626804475297-41609ea064eb?w=800&q=80', category: 'Small Chops' },
