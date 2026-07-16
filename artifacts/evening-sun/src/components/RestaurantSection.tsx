@@ -15,6 +15,7 @@ const menuItems = [
   
   // Shawarma & Burgers
   { id: 's1', name: 'Chicken Shawarma', price: 2500, description: 'Juicy chicken, sausages, cabbage, and our signature sauce.', image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80', category: 'Shawarma' },
+  { id: 's3', name: 'Beef Shawarma', price: 2800, description: 'Tender spiced beef strips, fresh vegetables, and garlic sauce wrapped in soft flatbread.', image: 'https://images.unsplash.com/photo-1551326844-4df70f978d18?w=800&q=80', category: 'Shawarma' },
   { id: 's2', name: 'XXL Mixed Shawarma', price: 4000, description: 'Beef, chicken, double sausage, fully loaded.', image: 'https://images.unsplash.com/photo-1619881589316-56c7f9e6b587?w=800&q=80', category: 'Shawarma' },
   { id: 'b1', name: 'Double Smash Burger', price: 5000, description: 'Two smashed beef patties, melted cheese, signature sauce.', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80', category: 'Burgers' },
   
@@ -22,6 +23,8 @@ const menuItems = [
   { id: 'p1', name: 'BBQ Chicken Pizza', price: 6500, description: 'BBQ sauce, grilled chicken, red onions, mozzarella.', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80', category: 'Pizza' },
   { id: 'p2', name: 'Meat Feast', price: 7000, description: 'Pepperoni, beef, chicken, sausages on a rich tomato base.', image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800&q=80', category: 'Pizza' },
   
+  { id: 'r6', name: 'Coconut Rice', price: 3000, description: 'Fragrant rice cooked in rich coconut milk with spices and assorted protein.', image: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?w=800&q=80', category: 'Nigerian Meals' },
+
   // More Nigerian Meals
   { id: 'bp1', name: 'Beans & Plantain', price: 1800, description: 'Slow-cooked Nigerian honey beans served alongside sweet fried plantain.', image: new URL('@assets/images_1784199104801.jpeg', import.meta.url).href, category: 'Nigerian Meals' },
   { id: 'mm1', name: 'Moi Moi', price: 800, description: 'Steamed bean pudding made with peppers, onions, and spices. Soft and flavourful.', image: new URL('@assets/savingpng-19_1784199104886.webp', import.meta.url).href, category: 'Nigerian Meals' },
