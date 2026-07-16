@@ -21,6 +21,14 @@ const supermarketItems = [
   // Toiletries
   { id: 'sm9', name: 'Dettol Soap (Pack of 6)', price: 3000, description: 'Original antibacterial bathing soap.', image: new URL('@assets/download_(2)_1784203514087.jpeg', import.meta.url).href, category: 'Toiletries' },
   { id: 'sm10', name: 'Oral-B Toothpaste 140g', price: 1000, description: 'Pro-Expert all around protection.', image: new URL('@assets/images_(34)_1784203514111.jpeg', import.meta.url).href, category: 'Toiletries' },
+
+  // Frozen Foods
+  { id: 'sm11', name: 'Frozen Chicken (Whole)', price: 8000, description: 'Fresh whole frozen chicken. Clean, plump, and ready to cook.', image: new URL('@assets/images_(36)_1784205304407.jpeg', import.meta.url).href, category: 'Frozen Foods' },
+  { id: 'sm12', name: 'Frozen Fish', price: 5000, description: 'Premium fresh-frozen fish. Caught and frozen at peak freshness.', image: new URL('@assets/images_(37)_1784205304527.jpeg', import.meta.url).href, category: 'Frozen Foods' },
+
+  // Household
+  { id: 'sm13', name: 'Air Freshener', price: 2500, description: 'Long-lasting reed diffuser air freshener. Keeps your home smelling fresh.', image: new URL('@assets/images_(38)_1784205304550.jpeg', import.meta.url).href, category: 'Household' },
+  { id: 'sm14', name: 'Paper Roll (10 Pack)', price: 1800, description: 'Soft n Cool 3-ply toilet rolls. Pack of 10 — strong and gentle.', image: new URL('@assets/images_(39)_1784205304568.jpeg', import.meta.url).href, category: 'Household' },
 ];
 
 const categories = ['All', 'Groceries', 'Beverages', 'Snacks', 'Toiletries', 'Household', 'Frozen Foods'];
