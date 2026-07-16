@@ -25,7 +25,7 @@ export function SnookerSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-3xl overflow-hidden h-[400px] lg:h-[500px]">
             <img 
-              src="https://images.unsplash.com/photo-1548135245-c48c3b0368b3?q=80&w=1200&auto=format&fit=crop" 
+              src={new URL('@assets/images_(23)_1784202019547.jpeg', import.meta.url).href}
               alt="Snooker Arena" 
               className="w-full h-full object-cover"
             />

@@ -60,7 +60,7 @@ export function LoungeSection() {
             <div className="col-span-1 grid grid-rows-2 gap-4 h-full">
               <div className="row-span-1 rounded-3xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1574096079513-d8259312b78a?q=80&w=800&auto=format&fit=crop" 
+                  src={new URL('@assets/images_(27)_1784202019526.jpeg', import.meta.url).href}
                   alt="Lounge ambiance" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
