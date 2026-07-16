@@ -1,8 +1,13 @@
 import { CONTACT_PHONE, ALT_PHONE, generateWhatsAppLink } from '@/lib/utils';
-import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
-export function Footer() {
+interface FooterProps {
+  onPrivacy: () => void;
+  onTerms: () => void;
+}
+
+export function Footer({ onPrivacy, onTerms }: FooterProps) {
   return (
     <footer className="bg-[#111] text-white pt-20 pb-10 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-6">
@@ -88,8 +93,9 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>© {new Date().getFullYear()} Evening Sun Eatery & Supermarket. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <button onClick={onPrivacy} className="hover:text-white transition-colors">Privacy Policy</button>
+            <button onClick={onTerms} className="hover:text-white transition-colors">Terms &amp; Conditions</button>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
         </div>
       </div>
