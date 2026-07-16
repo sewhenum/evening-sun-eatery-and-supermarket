@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Evening Sun Eatery & Supermarket"
+version = "1.0.0"
+id = "artifacts/evening-sun"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23143
+
+[services.development]
+run = "pnpm --filter @workspace/evening-sun run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/evening-sun", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/evening-sun/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23143"
+BASE_PATH = "/"
