@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
-import { formatNaira } from '@/lib/utils';
+
 import { toast } from 'sonner';
 
 type Product = {
@@ -47,9 +47,6 @@ export function ProductCard({ product }: { product: Product }) {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"
         />
-        <div className="absolute top-3 right-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-full text-sm font-bold shadow-sm">
-          {formatNaira(product.price)}
-        </div>
       </div>
       
       <div className="p-5 flex flex-col flex-grow">

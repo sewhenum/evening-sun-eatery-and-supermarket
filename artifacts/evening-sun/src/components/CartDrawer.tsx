@@ -3,7 +3,7 @@ import { Plus, Minus, X, ShoppingBag, Trash2, ArrowRight } from 'lucide-react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
-import { formatNaira, CONTACT_PHONE, generateWhatsAppLink } from '@/lib/utils';
+import { CONTACT_PHONE, generateWhatsAppLink } from '@/lib/utils';
 
 export function CartDrawer() {
   const { items, removeFromCart, updateQuantity, totalPrice, isCartOpen, setIsCartOpen, clearCart } = useCart();
@@ -23,13 +23,11 @@ export function CartDrawer() {
     
     orderText += `*ITEMS:*\n`;
     items.forEach((item, index) => {
-      orderText += `${index + 1}. ${item.name} x${item.quantity} - ${formatNaira(item.price * item.quantity)}\n`;
+      orderText += `${index + 1}. ${item.name} x${item.quantity}\n`;
     });
-    
-    orderText += `\n*TOTAL: ${formatNaira(totalPrice)}*\n`;
-    
+
     if (deliveryType === 'delivery') {
-      orderText += `_(Delivery fee will be calculated based on your location)_`;
+      orderText += `\n_(Delivery fee will be calculated based on your location)_`;
     }
 
     window.open(generateWhatsAppLink(CONTACT_PHONE, orderText), '_blank');
@@ -84,7 +82,6 @@ export function CartDrawer() {
                             <Trash2 className="w-4 h-4" />
                           </button>
                         </div>
-                        <p className="text-primary font-bold text-sm mt-1">{formatNaira(item.price)}</p>
                       </div>
                       
                       <div className="flex items-center justify-between mt-2">
@@ -103,9 +100,6 @@ export function CartDrawer() {
                             <Plus className="w-3 h-3" />
                           </button>
                         </div>
-                        <span className="font-bold text-sm">
-                          {formatNaira(item.price * item.quantity)}
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -151,20 +145,13 @@ export function CartDrawer() {
 
         {items.length > 0 && (
           <div className="p-6 border-t border-border bg-card/50 backdrop-blur-sm">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-muted-foreground">Subtotal</span>
-              <span className="font-bold">{formatNaira(totalPrice)}</span>
-            </div>
             {deliveryType === 'delivery' && (
               <div className="flex justify-between items-center mb-4 text-sm text-muted-foreground">
                 <span>Delivery Fee</span>
                 <span>Calculated on WhatsApp</span>
               </div>
             )}
-            <div className="flex justify-between items-center mb-6 pt-2 border-t border-border/50">
-              <span className="font-bold text-lg">Total</span>
-              <span className="font-display font-bold text-2xl text-primary">{formatNaira(totalPrice)}</span>
-            </div>
+            <div className="mb-6" />
             
             <Button 
               className="w-full h-14 rounded-full text-lg font-bold bg-green-500 hover:bg-green-600 text-white gap-2 shadow-lg shadow-green-500/20"
