@@ -22,12 +22,24 @@ const menuItems = [
   { id: 'p1', name: 'BBQ Chicken Pizza', price: 6500, description: 'BBQ sauce, grilled chicken, red onions, mozzarella.', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80', category: 'Pizza' },
   { id: 'p2', name: 'Meat Feast', price: 7000, description: 'Pepperoni, beef, chicken, sausages on a rich tomato base.', image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800&q=80', category: 'Pizza' },
   
+  // Beans & Plantain
+  { id: 'bp1', name: 'Beans & Plantain', price: 1800, description: 'Slow-cooked Nigerian honey beans served alongside sweet fried plantain.', image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80', category: 'Beans & Plantain' },
+
+  // Moi Moi
+  { id: 'mm1', name: 'Moi Moi', price: 800, description: 'Steamed bean pudding made with peppers, onions, and spices. Soft and flavourful.', image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80', category: 'Moi Moi' },
+
+  // Efo Riro & Semovita
+  { id: 'ef1', name: 'Efo Riro & Semovita', price: 2500, description: 'Yoruba-style leafy vegetable soup cooked with assorted meat, served with smooth semovita.', image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80', category: 'Efo Riro & Semovita' },
+
+  // Ogbono & Pounded Yam
+  { id: 'og1', name: 'Ogbono & Pounded Yam', price: 2800, description: 'Draw soup made from ground ogbono seeds with assorted meat, paired with silky pounded yam.', image: 'https://images.unsplash.com/photo-1623961990059-28356e226a77?w=800&q=80', category: 'Ogbono & Pounded Yam' },
+
   // Small Chops & Drinks
   { id: 'sc1', name: 'Small Chops Pack', price: 2500, description: 'Spring rolls, samosas, puff puff, and peppered meat.', image: 'https://images.unsplash.com/photo-1626804475297-41609ea064eb?w=800&q=80', category: 'Small Chops' },
   { id: 'd1', name: 'Chapman', price: 1200, description: 'Classic Nigerian mocktail with a hint of Angostura bitters.', image: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80', category: 'Drinks' },
 ];
 
-const categories = ['All', 'Nigerian Meals', 'Shawarma', 'Burgers', 'Pizza', 'Small Chops', 'Drinks'];
+const categories = ['All', 'Nigerian Meals', 'Beans & Plantain', 'Moi Moi', 'Efo Riro & Semovita', 'Ogbono & Pounded Yam', 'Shawarma', 'Burgers', 'Pizza', 'Small Chops', 'Drinks'];
 
 export function RestaurantSection() {
   const [activeCategory, setActiveCategory] = useState('All');
