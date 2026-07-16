@@ -4,14 +4,14 @@ import { CONTACT_PHONE, generateWhatsAppLink } from '@/lib/utils';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const services = [
-  { name: 'Professional Haircut', price: '₦2,000' },
-  { name: 'Hair Styling', price: '₦5,000' },
-  { name: 'Braiding (from)', price: '₦8,000' },
-  { name: 'Hair Coloring (from)', price: '₦10,000' },
-  { name: 'Facial Treatment', price: '₦5,000' },
-  { name: 'Manicure', price: '₦3,000' },
-  { name: 'Pedicure', price: '₦3,500' },
-  { name: 'Full Spa Treatment', price: '₦15,000' },
+  'Professional Haircut',
+  'Hair Styling',
+  'Braiding',
+  'Hair Coloring',
+  'Facial Treatment',
+  'Manicure',
+  'Pedicure',
+  'Full Spa Treatment',
 ];
 
 export function SalonSection() {
@@ -50,9 +50,9 @@ export function SalonSection() {
               <h3 className="font-display font-bold text-2xl mb-6 border-b border-border pb-4">Our Services</h3>
               <div className="grid sm:grid-cols-2 gap-y-4 gap-x-8">
                 {services.map((service, i) => (
-                  <div key={i} className="flex justify-between items-center py-2 border-b border-border/30 border-dashed">
-                    <span className="font-medium text-muted-foreground">{service.name}</span>
-                    <span className="font-bold">{service.price}</span>
+                  <div key={i} className="flex items-center gap-3 py-2 border-b border-border/30 border-dashed">
+                    <div className="w-2 h-2 rounded-full bg-rose-500 shrink-0" />
+                    <span className="font-medium text-muted-foreground">{service}</span>
                   </div>
                 ))}
               </div>

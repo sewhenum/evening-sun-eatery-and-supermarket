@@ -4,9 +4,9 @@ import { CONTACT_PHONE, generateWhatsAppLink } from '@/lib/utils';
 
 export function SnookerSection() {
   const packages = [
-    { name: 'Hourly Rate', price: '₦1,500/hr', desc: 'Standard play per hour per table', icon: Clock },
-    { name: 'Tournament Entry', price: '₦5,000', desc: 'Join our weekly Friday tournaments', icon: Trophy },
-    { name: 'Group Package', price: '₦12,000', desc: '4 people, 3hrs play + 4 drinks', icon: Gamepad2 },
+    { name: 'Hourly Rate', desc: 'Standard play per hour per table', icon: Clock },
+    { name: 'Tournament Entry', desc: 'Join our weekly Friday tournaments', icon: Trophy },
+    { name: 'Group Package', desc: '4 people, 3hrs play + 4 drinks', icon: Gamepad2 },
   ];
 
   return (
@@ -43,9 +43,6 @@ export function SnookerSection() {
                   <div className="flex-grow">
                     <h4 className="font-bold text-lg">{pkg.name}</h4>
                     <p className="text-sm text-gray-400">{pkg.desc}</p>
-                  </div>
-                  <div className="text-right">
-                    <span className="font-bold text-xl text-blue-400">{pkg.price}</span>
                   </div>
                 </div>
               ))}

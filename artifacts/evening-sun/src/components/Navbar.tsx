@@ -46,13 +46,11 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display font-bold text-xl shadow-lg">
-            ES
-          </div>
-          <div className={`hidden md:block font-display font-bold text-xl leading-tight ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-md'}`}>
-            Evening Sun
-            <span className="block text-xs font-sans font-normal opacity-80 tracking-widest uppercase">Eatery & Supermarket</span>
-          </div>
+          <img
+            src={new URL('@assets/file_00000000997471f4a6e796bb7e2cb183_1784205788721.png', import.meta.url).href}
+            alt="Evening Sun Eatery & Supermarket"
+            className="h-12 w-auto object-contain drop-shadow-md"
+          />
         </div>
 
         {/* Desktop Nav */}
