@@ -10,7 +10,7 @@ const menuItems = [
   { id: 'r1', name: 'Jollof Rice', price: 2500, description: 'Classic smoky party jollof rice served with plantain.', image: new URL('@assets/pexels-saizstudio-17952748_1784197343058.jpg', import.meta.url).href, category: 'Nigerian Meals' },
   { id: 'r2', name: 'Fried Rice', price: 2500, description: 'Rich Nigerian fried rice packed with vegetables and liver.', image: new URL('@assets/images_(1)_1784197343029.jpeg', import.meta.url).href, category: 'Nigerian Meals' },
   { id: 'r3', name: 'Egusi Soup', price: 2000, description: 'Rich melon seed soup cooked with assorted meat.', image: new URL('@assets/WhatsApp-Image-2025-01-08-at-08.19.23_707dbada-e1736323921927-_1784197343007.jpg', import.meta.url).href, category: 'Nigerian Meals' },
-  { id: 'r4', name: 'Pounded Yam', price: 1500, description: 'Smooth, hot pounded yam. Perfect with any soup.', image: 'https://images.unsplash.com/photo-1623961990059-28356e226a77?w=800&q=80', category: 'Nigerian Meals' },
+
   { id: 'r5', name: 'Peppered Chicken', price: 3500, description: 'Spicy, flavorful peppered chicken portions.', image: new URL('@assets/download_1784197342397.jpeg', import.meta.url).href, category: 'Nigerian Meals' },
   
   // Shawarma & Burgers
