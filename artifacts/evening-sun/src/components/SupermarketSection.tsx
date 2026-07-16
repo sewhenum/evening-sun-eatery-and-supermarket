@@ -5,22 +5,22 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
 const supermarketItems = [
   // Groceries
-  { id: 'sm1', name: 'Golden Penny Pasta 500g', price: 600, description: 'Premium quality spaghetti.', image: 'https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=800&q=80', category: 'Groceries' },
+  { id: 'sm1', name: 'Golden Penny Pasta 500g', price: 600, description: 'Premium quality spaghetti.', image: new URL('@assets/images_(28)_1784203513983.jpeg', import.meta.url).href, category: 'Groceries' },
   { id: 'sm2', name: 'Kings Vegetable Oil 3L', price: 6500, description: 'Pure cholesterol-free vegetable oil.', image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80', category: 'Groceries' },
-  { id: 'sm3', name: 'Titus Sardine 125g', price: 800, description: 'Premium canned sardines in oil.', image: 'https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=800&q=80', category: 'Groceries' },
+  { id: 'sm3', name: 'Titus Sardine 125g', price: 800, description: 'Premium canned sardines in oil.', image: new URL('@assets/images_(40)_1784203513939.jpeg', import.meta.url).href, category: 'Groceries' },
   
   // Beverages
-  { id: 'sm4', name: 'Milo Refill 500g', price: 2500, description: 'Nestle Milo cocoa powder refill pack.', image: 'https://images.unsplash.com/photo-1517488629431-6427e02d7280?w=800&q=80', category: 'Beverages' },
+  { id: 'sm4', name: 'Milo Refill 500g', price: 2500, description: 'Nestle Milo cocoa powder refill pack.', image: new URL('@assets/images_(29)_1784203514005.jpeg', import.meta.url).href, category: 'Beverages' },
   { id: 'sm5', name: 'Peak Milk Refill 380g', price: 2800, description: 'Rich and creamy powdered milk.', image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&q=80', category: 'Beverages' },
-  { id: 'sm6', name: 'Chivita 100% Orange 1L', price: 1200, description: 'Pure orange juice with no added sugar.', image: 'https://images.unsplash.com/photo-1600271886742-f049cd451b02?w=800&q=80', category: 'Beverages' },
+  { id: 'sm6', name: 'Chivita 100% Juice 1L', price: 1200, description: 'Pure fruit juice blend — orange, apple, grape & pineapple. No added sugar.', image: new URL('@assets/images_(32)_1784203514040.jpeg', import.meta.url).href, category: 'Beverages' },
 
   // Snacks
-  { id: 'sm7', name: 'Pringles Original', price: 2000, description: 'Classic salted potato crisps.', image: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd08c?w=800&q=80', category: 'Snacks' },
+  { id: 'sm7', name: 'Pringles', price: 2000, description: 'Classic potato crisps in assorted flavours — Original, Pizza, Sour Cream & more.', image: new URL('@assets/images_(33)_1784203514066.jpeg', import.meta.url).href, category: 'Snacks' },
   { id: 'sm8', name: 'Oreo Original', price: 1500, description: 'Chocolate sandwich cookies with vanilla cream.', image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80', category: 'Snacks' },
   
   // Toiletries
-  { id: 'sm9', name: 'Dettol Soap (Pack of 6)', price: 3000, description: 'Original antibacterial bathing soap.', image: 'https://images.unsplash.com/photo-1584824486516-0555a07fc511?w=800&q=80', category: 'Toiletries' },
-  { id: 'sm10', name: 'Oral-B Toothpaste 140g', price: 1000, description: 'Pro-Expert all around protection.', image: 'https://images.unsplash.com/photo-1559598467-f8b76c8155d0?w=800&q=80', category: 'Toiletries' },
+  { id: 'sm9', name: 'Dettol Soap (Pack of 6)', price: 3000, description: 'Original antibacterial bathing soap.', image: new URL('@assets/download_(2)_1784203514087.jpeg', import.meta.url).href, category: 'Toiletries' },
+  { id: 'sm10', name: 'Oral-B Toothpaste 140g', price: 1000, description: 'Pro-Expert all around protection.', image: new URL('@assets/images_(34)_1784203514111.jpeg', import.meta.url).href, category: 'Toiletries' },
 ];
 
 const categories = ['All', 'Groceries', 'Beverages', 'Snacks', 'Toiletries', 'Household', 'Frozen Foods'];
