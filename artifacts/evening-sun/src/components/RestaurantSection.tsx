@@ -7,11 +7,11 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 // Dummy data for Restaurant
 const menuItems = [
   // Nigerian Meals
-  { id: 'r1', name: 'Jollof Rice', price: 2500, description: 'Classic smoky party jollof rice served with plantain.', image: 'https://images.unsplash.com/photo-1664993175402-0e318f773ff9?w=800&q=80', category: 'Nigerian Meals' },
-  { id: 'r2', name: 'Fried Rice', price: 2500, description: 'Rich Nigerian fried rice packed with vegetables and liver.', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80', category: 'Nigerian Meals' },
-  { id: 'r3', name: 'Egusi Soup', price: 2000, description: 'Rich melon seed soup cooked with assorted meat.', image: 'https://images.unsplash.com/photo-1548943487-a2e4f43b4859?w=800&q=80', category: 'Nigerian Meals' },
+  { id: 'r1', name: 'Jollof Rice', price: 2500, description: 'Classic smoky party jollof rice served with plantain.', image: new URL('@assets/pexels-saizstudio-17952748_1784197343058.jpg', import.meta.url).href, category: 'Nigerian Meals' },
+  { id: 'r2', name: 'Fried Rice', price: 2500, description: 'Rich Nigerian fried rice packed with vegetables and liver.', image: new URL('@assets/images_(1)_1784197343029.jpeg', import.meta.url).href, category: 'Nigerian Meals' },
+  { id: 'r3', name: 'Egusi Soup', price: 2000, description: 'Rich melon seed soup cooked with assorted meat.', image: new URL('@assets/WhatsApp-Image-2025-01-08-at-08.19.23_707dbada-e1736323921927-_1784197343007.jpg', import.meta.url).href, category: 'Nigerian Meals' },
   { id: 'r4', name: 'Pounded Yam', price: 1500, description: 'Smooth, hot pounded yam. Perfect with any soup.', image: 'https://images.unsplash.com/photo-1623961990059-28356e226a77?w=800&q=80', category: 'Nigerian Meals' },
-  { id: 'r5', name: 'Peppered Chicken', price: 3500, description: 'Spicy, flavorful peppered chicken portions.', image: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?w=800&q=80', category: 'Nigerian Meals' },
+  { id: 'r5', name: 'Peppered Chicken', price: 3500, description: 'Spicy, flavorful peppered chicken portions.', image: new URL('@assets/download_1784197342397.jpeg', import.meta.url).href, category: 'Nigerian Meals' },
   
   // Shawarma & Burgers
   { id: 's1', name: 'Chicken Shawarma', price: 2500, description: 'Juicy chicken, sausages, cabbage, and our signature sauce.', image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80', category: 'Shawarma' },
