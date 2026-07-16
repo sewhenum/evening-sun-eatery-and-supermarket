@@ -5,6 +5,7 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
 const supermarketItems = [
   // Groceries
+  { id: 'sm0', name: 'Mama Gold Rice 25kg', price: 45000, description: 'Supreme quality Thai parboiled rice. Long grain, fluffy, and perfect for every Nigerian dish.', image: new URL('@assets/images_(35)_1784205542674.jpeg', import.meta.url).href, category: 'Groceries' },
   { id: 'sm1', name: 'Golden Penny Pasta 500g', price: 600, description: 'Premium quality spaghetti.', image: new URL('@assets/images_(28)_1784203513983.jpeg', import.meta.url).href, category: 'Groceries' },
   { id: 'sm2', name: 'Kings Vegetable Oil 3L', price: 6500, description: 'Pure cholesterol-free vegetable oil.', image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80', category: 'Groceries' },
   { id: 'sm3', name: 'Titus Sardine 125g', price: 800, description: 'Premium canned sardines in oil.', image: new URL('@assets/images_(40)_1784203513939.jpeg', import.meta.url).href, category: 'Groceries' },
