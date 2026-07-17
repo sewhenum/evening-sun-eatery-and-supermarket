@@ -1,8 +1,11 @@
 import { Router } from "express";
 import { db, adminOrdersTable, adminCustomersTable } from "@workspace/db";
 import { desc, eq, ilike, or, sql, and, gte, lt } from "drizzle-orm";
+import { parsePaginationParam, MAX_PAGE_LIMIT } from "../lib/pagination.js";
 
 const router = Router();
+
+const ALLOWED_ORDER_STATUSES = ["pending", "confirmed", "completed", "cancelled"] as const;
 
 // GET /admin/stats
 router.get("/admin/stats", async (_req, res) => {
@@ -126,15 +129,24 @@ router.get("/admin/stats", async (_req, res) => {
 // GET /admin/orders
 router.get("/admin/orders", async (req, res) => {
   try {
-    const { status, limit = "50", offset = "0" } = req.query as Record<string, string>;
+    const { status, limit: limitRaw = "50", offset: offsetRaw = "0" } = req.query as Record<string, string>;
+
+    const limitVal = parsePaginationParam(limitRaw);
+    const offsetVal = parsePaginationParam(offsetRaw);
+    if (limitVal === null || offsetVal === null) {
+      return res.status(400).json({ error: "limit and offset must be non-negative integers" });
+    }
+    const limit = Math.min(limitVal, MAX_PAGE_LIMIT);
+    const offset = offsetVal;
+
     const conditions = status && status !== "all" ? [eq(adminOrdersTable.status, status as any)] : [];
     const rows = await db
       .select()
       .from(adminOrdersTable)
       .where(conditions.length ? and(...conditions) : undefined)
       .orderBy(desc(adminOrdersTable.createdAt))
-      .limit(parseInt(limit))
-      .offset(parseInt(offset));
+      .limit(limit)
+      .offset(offset);
 
     res.json(rows.map(r => ({
       id: r.id,
@@ -273,10 +285,15 @@ router.patch("/admin/orders/:id", async (req, res) => {
     const id = parseInt(req.params.id);
     const { status } = req.body;
     if (!status) return res.status(400).json({ error: "status required" });
+    if (!(ALLOWED_ORDER_STATUSES as readonly string[]).includes(status)) {
+      return res.status(400).json({
+        error: `Invalid status. Must be one of: ${ALLOWED_ORDER_STATUSES.join(", ")}`,
+      });
+    }
 
     const [updated] = await db
       .update(adminOrdersTable)
-      .set({ status: status as any })
+      .set({ status: status as typeof ALLOWED_ORDER_STATUSES[number] })
       .where(eq(adminOrdersTable.id, id))
       .returning();
 
@@ -300,7 +317,16 @@ router.patch("/admin/orders/:id", async (req, res) => {
 // GET /admin/customers
 router.get("/admin/customers", async (req, res) => {
   try {
-    const { search, limit = "50", offset = "0" } = req.query as Record<string, string>;
+    const { search, limit: limitRaw = "50", offset: offsetRaw = "0" } = req.query as Record<string, string>;
+
+    const limitVal = parsePaginationParam(limitRaw);
+    const offsetVal = parsePaginationParam(offsetRaw);
+    if (limitVal === null || offsetVal === null) {
+      return res.status(400).json({ error: "limit and offset must be non-negative integers" });
+    }
+    const limit = Math.min(limitVal, MAX_PAGE_LIMIT);
+    const offset = offsetVal;
+
     const conditions = search
       ? [or(ilike(adminCustomersTable.name, `%${search}%`), ilike(adminCustomersTable.phone, `%${search}%`))]
       : [];
@@ -310,8 +336,8 @@ router.get("/admin/customers", async (req, res) => {
       .from(adminCustomersTable)
       .where(conditions.length ? and(...conditions) : undefined)
       .orderBy(desc(adminCustomersTable.totalOrders))
-      .limit(parseInt(limit))
-      .offset(parseInt(offset));
+      .limit(limit)
+      .offset(offset);
 
     res.json(rows.map(r => ({
       id: r.id,
