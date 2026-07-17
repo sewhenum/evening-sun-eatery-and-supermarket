@@ -76,7 +76,7 @@ export function ContactSection() {
                 <a href="https://instagram.com/evensuneatry" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
+                <a href="https://facebook.com/EveningSun247" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
                   <Facebook className="w-6 h-6" />
                 </a>
               </div>
