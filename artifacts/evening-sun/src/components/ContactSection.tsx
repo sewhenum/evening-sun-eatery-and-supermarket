@@ -27,8 +27,8 @@ export function ContactSection() {
                   <h4 className="font-bold text-lg mb-1">Our Location</h4>
                   <p className="text-muted-foreground leading-relaxed">
                     Evening Sun Eatery & Supermarket Complex<br />
-                    [Insert Street Address],<br />
-                    [Insert City], Nigeria.
+                    Mosafejo,<br />
+                    Ondo State, Nigeria.
                   </p>
                 </div>
               </div>
@@ -83,20 +83,18 @@ export function ContactSection() {
             </div>
           </div>
           
-          {/* Map/Image Placeholder */}
+          {/* Google Maps Embed */}
           <div className="lg:w-1/2 h-[500px] lg:h-auto min-h-[500px] rounded-3xl overflow-hidden bg-muted relative border border-border">
-            {/* If Google Maps embed is provided later, replace this image */}
-            <img 
-              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" 
-              alt="Restaurant exterior" 
-              className="absolute inset-0 w-full h-full object-cover"
+            <iframe
+              title="Evening Sun Eatery & Supermarket location"
+              src="https://maps.google.com/maps?q=Mosafejo,+Ondo+State,+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              className="absolute inset-0 w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-white w-full">
-                <h3 className="font-display font-bold text-2xl mb-2">We are here</h3>
-                <p>Come experience the magic in person.</p>
-              </div>
-            </div>
           </div>
           
         </div>
