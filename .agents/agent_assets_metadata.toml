@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "sIUOt_hoV1clw3kQTrLQC"
+uri = "file://evening-sun-project.zip"
+type = "unspecified"
+title = "Evening Sun Project (ZIP)"
