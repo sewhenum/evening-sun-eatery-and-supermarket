@@ -87,7 +87,7 @@ export function ContactSection() {
           <div className="lg:w-1/2 h-[500px] lg:h-auto min-h-[500px] rounded-3xl overflow-hidden bg-muted relative border border-border">
             <iframe
               title="Evening Sun Eatery & Supermarket location"
-              src="https://maps.google.com/maps?q=Mosafejo,+Ondo+State,+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Mosafejo,+Badagry,+Lagos+State,+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               className="absolute inset-0 w-full h-full border-0"
