@@ -87,6 +87,7 @@ lib/
 - Contact phone: 08081734021 (WhatsApp + calls), alternate: defined in `lib/utils.ts`
 - Facebook handle: @EveningSun247 (facebook.com/EveningSun247)
 - Instagram handle: @evensuneatry (instagram.com/evensuneatry)
+- Contact section has a live Google Maps embed centred on Mosafejo, Ondo State, Nigeria
 
 ## Gotchas
 
