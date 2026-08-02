@@ -6,7 +6,7 @@ const grillItems = [
   { id: 'g1', name: 'Grilled Turkey', price: 6000, description: 'Spicy, tender, and intensely flavorful grilled turkey wings.', image: new URL('@assets/images_(20)_1784202019464.jpeg', import.meta.url).href, category: 'Poultry' },
   { id: 'g2', name: 'Asun (Spicy Goat Meat)', price: 4500, description: 'Smoky, incredibly spicy chopped roasted goat meat.', image: new URL('@assets/images_(9)_1784202019485.jpeg', import.meta.url).href, category: 'Meat' },
   { id: 'g3', name: 'Beef Suya (Wrap)', price: 2000, description: 'Authentic Hausa spiced grilled beef with onions, cabbage and tomatoes.', image: new URL('@assets/images_(22)_1784202019503.jpeg', import.meta.url).href, category: 'Suya' },
-  { id: 'g4', name: 'Grilled Croaker Fish', price: 6500, description: 'Whole grilled croaker, marinated in special peppers, served with plantain.', image: 'https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=800&q=80', category: 'Seafood' },
+  { id: 'g4', name: 'Grilled Croaker Fish', price: 6500, description: 'Whole grilled croaker, marinated in special peppers, served with plantain.', image: 'https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=1200?w=800&q=80q=100?w=800&q=80auto=format?w=800&q=80fit=crop', category: 'Seafood' },
 ];
 
 export function GrillSection() {

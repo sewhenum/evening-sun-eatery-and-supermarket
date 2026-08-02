@@ -23,12 +23,12 @@ export function SalonSection() {
           <div className="lg:w-1/2 w-full">
             <div className="grid grid-cols-2 gap-4">
               <img 
-                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=100?q=80&w=800&auto=format&fit=cropw=1200?q=80&w=800&auto=format&fit=cropauto=format?q=80&w=800&auto=format&fit=cropfit=crop" 
                 alt="Hair Styling" 
                 className="rounded-t-full rounded-bl-full object-cover w-full h-[300px]"
               />
               <img 
-                src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=800&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=100?q=80&w=800&auto=format&fit=cropw=1200?q=80&w=800&auto=format&fit=cropauto=format?q=80&w=800&auto=format&fit=cropfit=crop" 
                 alt="Barber" 
                 className="rounded-b-full rounded-tr-full object-cover w-full h-[300px] mt-12"
               />

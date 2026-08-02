@@ -7,17 +7,17 @@ const supermarketItems = [
   // Groceries
   { id: 'sm0', name: 'Mama Gold Rice 25kg', price: 45000, description: 'Supreme quality Thai parboiled rice. Long grain, fluffy, and perfect for every Nigerian dish.', image: new URL('@assets/images_(35)_1784205542674.jpeg', import.meta.url).href, category: 'Groceries' },
   { id: 'sm1', name: 'Golden Penny Pasta 500g', price: 600, description: 'Premium quality spaghetti.', image: new URL('@assets/images_(28)_1784203513983.jpeg', import.meta.url).href, category: 'Groceries' },
-  { id: 'sm2', name: 'Kings Vegetable Oil 3L', price: 6500, description: 'Pure cholesterol-free vegetable oil.', image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80', category: 'Groceries' },
+  { id: 'sm2', name: 'Kings Vegetable Oil 3L', price: 6500, description: 'Pure cholesterol-free vegetable oil.', image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200?w=800&q=80q=100?w=800&q=80auto=format?w=800&q=80fit=crop', category: 'Groceries' },
   { id: 'sm3', name: 'Titus Sardine 125g', price: 800, description: 'Premium canned sardines in oil.', image: new URL('@assets/images_(40)_1784203513939.jpeg', import.meta.url).href, category: 'Groceries' },
   
   // Beverages
   { id: 'sm4', name: 'Milo Refill 500g', price: 2500, description: 'Nestle Milo cocoa powder refill pack.', image: new URL('@assets/images_(29)_1784203514005.jpeg', import.meta.url).href, category: 'Beverages' },
-  { id: 'sm5', name: 'Peak Milk Refill 380g', price: 2800, description: 'Rich and creamy powdered milk.', image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&q=80', category: 'Beverages' },
+  { id: 'sm5', name: 'Peak Milk Refill 380g', price: 2800, description: 'Rich and creamy powdered milk.', image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=1200?w=800&q=80q=100?w=800&q=80auto=format?w=800&q=80fit=crop', category: 'Beverages' },
   { id: 'sm6', name: 'Chivita 100% Juice 1L', price: 1200, description: 'Pure fruit juice blend — orange, apple, grape & pineapple. No added sugar.', image: new URL('@assets/images_(32)_1784203514040.jpeg', import.meta.url).href, category: 'Beverages' },
 
   // Snacks
   { id: 'sm7', name: 'Pringles', price: 2000, description: 'Classic potato crisps in assorted flavours — Original, Pizza, Sour Cream & more.', image: new URL('@assets/images_(33)_1784203514066.jpeg', import.meta.url).href, category: 'Snacks' },
-  { id: 'sm8', name: 'Oreo Original', price: 1500, description: 'Chocolate sandwich cookies with vanilla cream.', image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80', category: 'Snacks' },
+  { id: 'sm8', name: 'Oreo Original', price: 1500, description: 'Chocolate sandwich cookies with vanilla cream.', image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1200?w=800&q=80q=100?w=800&q=80auto=format?w=800&q=80fit=crop', category: 'Snacks' },
   
   // Toiletries
   { id: 'sm9', name: 'Dettol Soap (Pack of 6)', price: 3000, description: 'Original antibacterial bathing soap.', image: new URL('@assets/download_(2)_1784203514087.jpeg', import.meta.url).href, category: 'Toiletries' },
