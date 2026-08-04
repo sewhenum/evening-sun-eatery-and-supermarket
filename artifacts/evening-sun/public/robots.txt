@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://evening-sun-eatery-and-supermarket-omega.vercel.app/sitemap.xml
