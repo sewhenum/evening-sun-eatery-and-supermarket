@@ -93,6 +93,7 @@ lib/
 
 - Always run `pnpm --filter @workspace/api-spec run codegen` after editing `openapi.yaml` — the frontend hooks are generated from it.
 - After any API server code change, restart the `artifacts/api-server: API Server` workflow.
+- The website production artifact serves directly from `artifacts/evening-sun/dist`; keep this aligned with Vite's `outDir`.
 - Images must use `new URL('@assets/filename', import.meta.url).href` — raw imports do not work with the Vite asset pipeline here.
 - `zod/v4` is the import path (not `zod`) — the project uses Zod v4.
 

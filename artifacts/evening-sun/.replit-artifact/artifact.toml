@@ -16,7 +16,7 @@ run = "pnpm --filter @workspace/evening-sun run dev"
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/evening-sun", "run", "build" ]
 serve = "static"
-publicDir = "artifacts/evening-sun/dist/public"
+publicDir = "artifacts/evening-sun/dist"
 
 [[services.production.rewrites]]
 from = "/*"
