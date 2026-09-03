@@ -10,7 +10,7 @@ export function SnookerSection() {
   ];
 
   return (
-    <section id="snooker" className="py-24 bg-[#111] text-white">
+    <section className="py-24 bg-[#111] text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
@@ -27,6 +27,8 @@ export function SnookerSection() {
             <img 
               src={new URL('@assets/images_(23)_1784202019547.jpeg', import.meta.url).href}
               alt="Snooker Arena" 
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>

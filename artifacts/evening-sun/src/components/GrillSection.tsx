@@ -6,17 +6,19 @@ const grillItems = [
   { id: 'g1', name: 'Grilled Turkey', price: 6000, description: 'Spicy, tender, and intensely flavorful grilled turkey wings.', image: new URL('@assets/images_(20)_1784202019464.jpeg', import.meta.url).href, category: 'Poultry' },
   { id: 'g2', name: 'Asun (Spicy Goat Meat)', price: 4500, description: 'Smoky, incredibly spicy chopped roasted goat meat.', image: new URL('@assets/images_(9)_1784202019485.jpeg', import.meta.url).href, category: 'Meat' },
   { id: 'g3', name: 'Beef Suya (Wrap)', price: 2000, description: 'Authentic Hausa spiced grilled beef with onions, cabbage and tomatoes.', image: new URL('@assets/images_(22)_1784202019503.jpeg', import.meta.url).href, category: 'Suya' },
-  { id: 'g4', name: 'Grilled Croaker Fish', price: 6500, description: 'Whole grilled croaker, marinated in special peppers, served with plantain.', image: 'https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=1200?w=800&q=80q=100?w=800&q=80auto=format?w=800&q=80fit=crop', category: 'Seafood' },
+  { id: 'g4', name: 'Grilled Croaker Fish', price: 6500, description: 'Whole grilled croaker, marinated in special peppers, served with plantain.', image: 'https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?auto=format&fit=crop&w=1200&q=80', category: 'Seafood' },
 ];
 
 export function GrillSection() {
   return (
-    <section id="grill" className="py-24 relative overflow-hidden bg-zinc-950 text-white">
+    <section className="py-24 relative overflow-hidden bg-zinc-950 text-white">
       {/* Dark/Fire themed background */}
       <div className="absolute inset-0 z-0 opacity-40">
         <img 
           src="https://images.unsplash.com/photo-1505018620898-92616e48ff6b?q=80&w=2000&auto=format&fit=crop" 
           alt="Fire background" 
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/40" />

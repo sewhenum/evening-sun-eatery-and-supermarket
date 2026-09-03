@@ -9,7 +9,7 @@ export function LoungeSection() {
   };
 
   return (
-    <section id="lounge" className="py-24 bg-background">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           
@@ -52,8 +52,10 @@ export function LoungeSection() {
           <div className="lg:w-1/2 grid grid-cols-2 gap-4 h-[600px]">
             <div className="col-span-1 h-full rounded-3xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=100?q=80&w=800&auto=format&fit=cropw=1200?q=80&w=800&auto=format&fit=cropauto=format?q=80&w=800&auto=format&fit=cropfit=crop" 
+                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80" 
                 alt="Lounge cocktails" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -62,13 +64,17 @@ export function LoungeSection() {
                 <img 
                   src={new URL('@assets/images_(27)_1784202019526.jpeg', import.meta.url).href}
                   alt="Lounge ambiance" 
+                loading="lazy"
+                decoding="async"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="row-span-1 rounded-3xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=100?q=80&w=800&auto=format&fit=cropw=1200?q=80&w=800&auto=format&fit=cropauto=format?q=80&w=800&auto=format&fit=cropfit=crop" 
+                  src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=1200&q=80" 
                   alt="VIP Section" 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>

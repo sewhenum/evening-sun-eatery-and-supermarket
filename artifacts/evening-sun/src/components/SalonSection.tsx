@@ -16,20 +16,24 @@ const services = [
 
 export function SalonSection() {
   return (
-    <section id="salon" className="py-24 bg-[#FAF9F6] dark:bg-[#121212]">
+    <section className="py-24 bg-[#FAF9F6] dark:bg-[#121212]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           
           <div className="lg:w-1/2 w-full">
             <div className="grid grid-cols-2 gap-4">
               <img 
-                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=100?q=80&w=800&auto=format&fit=cropw=1200?q=80&w=800&auto=format&fit=cropauto=format?q=80&w=800&auto=format&fit=cropfit=crop" 
+                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=80" 
                 alt="Hair Styling" 
+                loading="lazy"
+                decoding="async"
                 className="rounded-t-full rounded-bl-full object-cover w-full h-[300px]"
               />
               <img 
-                src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=100?q=80&w=800&auto=format&fit=cropw=1200?q=80&w=800&auto=format&fit=cropauto=format?q=80&w=800&auto=format&fit=cropfit=crop" 
+                src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80" 
                 alt="Barber" 
+                loading="lazy"
+                decoding="async"
                 className="rounded-b-full rounded-tr-full object-cover w-full h-[300px] mt-12"
               />
             </div>
