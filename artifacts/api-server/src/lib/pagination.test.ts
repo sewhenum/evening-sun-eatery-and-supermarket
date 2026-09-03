@@ -4,7 +4,7 @@
  */
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parsePaginationParam, MAX_PAGE_LIMIT } from "./pagination.ts";
+import { parsePaginationParam, MAX_PAGE_LIMIT } from "./pagination.js";
 
 // ── Valid inputs ──────────────────────────────────────────────────────────────
 

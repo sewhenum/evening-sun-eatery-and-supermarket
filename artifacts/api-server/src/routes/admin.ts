@@ -148,7 +148,7 @@ router.get("/admin/orders", async (req, res) => {
       .limit(limit)
       .offset(offset);
 
-    res.json(rows.map(r => ({
+    return res.json(rows.map(r => ({
       id: r.id,
       customerName: r.customerName,
       customerPhone: r.customerPhone,
@@ -160,7 +160,7 @@ router.get("/admin/orders", async (req, res) => {
     })));
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to fetch orders" });
+    return res.status(500).json({ error: "Failed to fetch orders" });
   }
 });
 
@@ -180,18 +180,18 @@ router.get("/admin/orders/monthly", async (_req, res) => {
       ORDER BY date_trunc('month', created_at) ASC
     `);
 
-    res.json((rows as any[]).map((r: any) => ({
+    return res.json(rows.rows.map((r: Record<string, unknown>) => ({
       month: r.month,
-      revenue: parseFloat(r.revenue),
-      orders: parseInt(r.orders),
-      averageOrderValue: parseInt(r.orders) > 0
-        ? Math.round(parseFloat(r.revenue) / parseInt(r.orders))
+      revenue: parseFloat(String(r.revenue)),
+      orders: parseInt(String(r.orders)),
+      averageOrderValue: parseInt(String(r.orders)) > 0
+        ? Math.round(parseFloat(String(r.revenue)) / parseInt(String(r.orders)))
         : 0,
-      newCustomers: parseInt(r.new_customers),
+      newCustomers: parseInt(String(r.new_customers)),
     })));
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to fetch monthly report" });
+    return res.status(500).json({ error: "Failed to fetch monthly report" });
   }
 });
 
@@ -248,10 +248,10 @@ router.get("/admin/orders/by-category", async (_req, res) => {
       }))
       .sort((a, b) => b.revenue - a.revenue);
 
-    res.json(result);
+    return res.json(result);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to fetch category stats" });
+    return res.status(500).json({ error: "Failed to fetch category stats" });
   }
 });
 
@@ -263,7 +263,7 @@ router.get("/admin/orders/recent", async (_req, res) => {
       .from(adminOrdersTable)
       .orderBy(desc(adminOrdersTable.createdAt))
       .limit(10);
-    res.json(rows.map(r => ({
+    return res.json(rows.map(r => ({
       id: r.id,
       customerName: r.customerName,
       customerPhone: r.customerPhone,
@@ -275,7 +275,7 @@ router.get("/admin/orders/recent", async (_req, res) => {
     })));
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to fetch recent orders" });
+    return res.status(500).json({ error: "Failed to fetch recent orders" });
   }
 });
 
@@ -298,7 +298,7 @@ router.patch("/admin/orders/:id", async (req, res) => {
       .returning();
 
     if (!updated) return res.status(404).json({ error: "Order not found" });
-    res.json({
+    return res.json({
       id: updated.id,
       customerName: updated.customerName,
       customerPhone: updated.customerPhone,
@@ -310,7 +310,7 @@ router.patch("/admin/orders/:id", async (req, res) => {
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to update order" });
+    return res.status(500).json({ error: "Failed to update order" });
   }
 });
 
@@ -339,7 +339,7 @@ router.get("/admin/customers", async (req, res) => {
       .limit(limit)
       .offset(offset);
 
-    res.json(rows.map(r => ({
+    return res.json(rows.map(r => ({
       id: r.id,
       name: r.name,
       phone: r.phone,
@@ -352,7 +352,7 @@ router.get("/admin/customers", async (req, res) => {
     })));
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to fetch customers" });
+    return res.status(500).json({ error: "Failed to fetch customers" });
   }
 });
 
@@ -365,7 +365,7 @@ router.get("/admin/customers/:id", async (req, res) => {
       .from(adminCustomersTable)
       .where(eq(adminCustomersTable.id, id));
     if (!cust) return res.status(404).json({ error: "Customer not found" });
-    res.json({
+    return res.json({
       id: cust.id,
       name: cust.name,
       phone: cust.phone,
@@ -378,7 +378,7 @@ router.get("/admin/customers/:id", async (req, res) => {
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to fetch customer" });
+    return res.status(500).json({ error: "Failed to fetch customer" });
   }
 });
 
